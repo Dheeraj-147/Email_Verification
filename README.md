@@ -56,6 +56,13 @@ npm start
 - Ensure both servers are running on the correct ports.
 - Verify the React app is configured to send requests to the correct Django backend URL.
 
+## Additional Information
+- For backend API documentation, refer to [Backend API Docs](link-to-your-api-docs) (if available).
+- To access Django admin, create a superuser with `python manage.py createsuperuser` and visit `http://localhost:8000/admin`.
+
+## Contact
+- If you encounter any issues or have questions, please contact noreply.quantumauth@gmail.com.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
