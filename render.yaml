@@ -21,7 +21,9 @@ services:
   - type: web
     name: quantum-auth
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn email_ver.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: PORT
