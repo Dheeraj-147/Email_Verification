@@ -34,15 +34,11 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1','quantum-auth.onrender.com', '.onrende
 
 FRONTEND_URL = 'http://localhost:2374'  # Adjust this to match your frontend URL
 
-STATIC_URL = '/static/'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
