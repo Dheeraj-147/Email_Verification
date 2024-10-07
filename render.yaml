@@ -9,7 +9,7 @@ services:
     startCommand: gunicorn email_ver.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: PORT
-        value: 8000
+        value: 2374
       - key: DJANGO_SECRET_KEY
         generateValue: true
       - key: SUPABASE_URL

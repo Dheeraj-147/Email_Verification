@@ -50,6 +50,7 @@ STATICFILES_DIRS = [
 ]
 
 # Application definition
+PORT = int(os.environ.get('PORT', 10000))
 
 INSTALLED_APPS = [
     "django.contrib.admin",
