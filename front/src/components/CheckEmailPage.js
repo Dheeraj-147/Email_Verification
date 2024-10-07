@@ -32,7 +32,7 @@ const CheckEmailPage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-cyan-500 to-green-500">
       <div className="bg-white p-8 rounded-lg shadow-md w-96">
         <div className="flex flex-col items-center">
-          <img alt="" 
+          <img  
             src={messageReadGif} 
             alt="Mail" 
             className="w-12 h-12 mb-4" 
@@ -47,7 +47,7 @@ const CheckEmailPage = () => {
             disabled={isResending}
             className={`flex items-center ${isResending ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white px-4 py-2 rounded-lg transition duration-200`}
           >
-            <img alt="" 
+            <img 
               src={paperPlaneGif} 
               alt="Send" 
               className="w-8 h-8 mr-2" 

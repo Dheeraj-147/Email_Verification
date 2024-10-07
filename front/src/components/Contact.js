@@ -43,10 +43,10 @@ const Contact = () => {
           <p className="mb-4 text-gray-700">Stay up to date with our latest news and updates by following us on social media:</p>
           
           <div className="flex space-x-4">
-            <a href="#" className="text-blue-500 hover:underline">Facebook</a>
-            <a href="#" className="text-blue-500 hover:underline">Twitter</a>
-            <a href="#" className="text-blue-500 hover:underline">LinkedIn</a>
-            <a href="#" className="text-blue-500 hover:underline">Instagram</a>
+            <a href="www.facebook.com" className="text-blue-500 hover:underline">Facebook</a>
+            <a href="www.x.com" className="text-blue-500 hover:underline">Twitter</a>
+            <a href="www.linkedin.com" className="text-blue-500 hover:underline">LinkedIn</a>
+            <a href="www.instagram.com" className="text-blue-500 hover:underline">Instagram</a>
           </div>
         </div>
         
