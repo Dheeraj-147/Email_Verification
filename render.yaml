@@ -30,6 +30,7 @@ services:
         value: "2374"
       - key: DJANGO_SECRET_KEY
         generateValue: true
+    staticPublishPath: ./staticfiles
 
   - type: static
     name: quantum-death
