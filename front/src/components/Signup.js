@@ -16,6 +16,7 @@ import vividGif from './img/vivid.gif';
 import { useNavigate } from 'react-router-dom';
 //import UserDetails from './UserDetails';
 import Cookies from 'js-cookie';
+import API_URL from '../config';
 
 const Signup = () => {
   const [showPassword1, setShowPassword] = useState(false);
@@ -63,7 +64,7 @@ const Signup = () => {
 
     try{
       setErr(false);
-      const response= await ax.post('http://localhost:8000/registration/',formData,{
+      const response= await ax.post(`${API_URL}/registration/`,formData,{
       headers: {
         'Content-Type': 'multipart/form-data' ,
         'X-CSRFToken': getCSRFToken(),

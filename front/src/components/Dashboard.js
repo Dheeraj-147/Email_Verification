@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import logo from "./img/download.jpeg";
+import API_URL from '../config';
 
 const HomePage = () => {
   const [user, setUser] = useState(null);
@@ -15,7 +16,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/registration/user-profile/', {
+        const response = await axios.get(`${API_URL}/registration/user-profile/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -109,7 +110,7 @@ const HomePage = () => {
             <div className="flex space-x-7">
               <div>
                 <a href="#" className="flex items-center">
-                  <img alt="" src={logo} alt="Logo" className="h-8 w-8 mr-2 rounded-full" />
+                  <img src={logo} alt="Logo" className="h-8 w-8 mr-2 rounded-full" />
                   <span className="text-white text-lg font-bold">Quantum Auth</span>
                 </a>
               </div>
@@ -145,7 +146,7 @@ const HomePage = () => {
               {user && (
                 <div className="flex items-center mb-6">
                   {user.profile_picture ? (
-                    <img alt="" 
+                    <img 
                       src={`http://localhost:8000${user.profile_picture}`} 
                       alt="Profile" 
                       className="w-16 h-16 object-cover rounded-full mr-4"

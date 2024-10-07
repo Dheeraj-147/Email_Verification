@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
+import API_URL from '../config';
 
 const PasswordReset = () => {
   const [password, setPassword] = useState('');
@@ -22,7 +23,7 @@ const PasswordReset = () => {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:8000/registration/verify-password-reset/', {
+      const response = await axios.post(`${API_URL}/registration/verify-password-reset/`, {
         token,
         new_password: password
       });

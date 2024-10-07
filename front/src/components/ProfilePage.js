@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../config';
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
@@ -15,7 +16,7 @@ const ProfilePage = () => {
     console.log('Token:', token);
     
     try {
-      const response = await axios.get('http://localhost:8000/registration/user-profile/', {
+      const response = await axios.get(`${API_URL}/registration/user-profile/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Response:', response.data);
@@ -53,7 +54,7 @@ const ProfilePage = () => {
       
       console.log('Sending data:', Object.fromEntries(formData));
 
-      const response = await axios.put('http://localhost:8000/registration/user-profile/', formData, {
+      const response = await axios.put(`${API_URL}/registration/user-profile/`, formData, {
         headers: { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data'

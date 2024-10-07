@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ax from 'axios';
+import API_URL from '../config';
 
 const VerifyEmailPage = () => {
   const [message, setMessage] = useState('');
@@ -29,7 +30,7 @@ const VerifyEmailPage = () => {
     setMessage('Verifying your email...');
 
     try {
-      const response = await ax.get(`http://localhost:8000/registration/verify-email/?token=${token}`);
+      const response = await ax.get(`${API_URL}/registration/verify-email/?token=${token}`);
       if (response.data.success) {
         setMessage('Email verified successfully! Redirecting to home page...');
         setTimeout(() => navigate('/homepage'), 3000);

@@ -6,6 +6,7 @@ import Fortune from "./Fortune";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import API_URL from '../config';
 
 const Home = () => {
   const [profilePicture, setProfilePicture] = useState(null);
@@ -17,7 +18,7 @@ const Home = () => {
   const fetchProfilePicture = async () => {
     const token = localStorage.getItem('token');
     try {
-      const response = await axios.get('http://localhost:8000/registration/user-profile/', {
+      const response = await axios.get(`${API_URL}/registration/user-profile/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProfilePicture(response.data.profile_picture);

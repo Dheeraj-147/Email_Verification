@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import axios from 'axios';  // Make sure axios is installed
 import messageReadGif from './img/Icons/message-read.gif';
 import paperPlaneGif from './img/Icons/paper-plane-unscreen.gif';
+import API_URL from '../config';
 
 const CheckEmailPage = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const CheckEmailPage = () => {
     setIsResending(true);
     setResendStatus('');
     try {
-      const response = await axios.post('http://localhost:8000/registration/resend-verification/', { email });
+      const response = await axios.post(`${API_URL}/registration/resend-verification/`, { email });
       if (response.data.success) {
         setResendStatus('Verification email resent successfully!');
       } else {

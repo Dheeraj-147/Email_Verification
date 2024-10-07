@@ -5,6 +5,7 @@ import Invisible from './img/Icons/invisible.png';
 import Lock from './img/Icons/lock-50.png';
 import Email from './img/Icons/email.png';
 import { Link, useNavigate,useLocation } from 'react-router-dom';
+import API_URL from '../config';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +25,7 @@ const Login = () => {
     email.trim();
     password.trim();
     try {
-      const response = await axios.post('http://localhost:8000/registration/login/', {
+      const response = await axios.post(`${API_URL}/registration/login/`, {
         email,
         password
       });
@@ -66,7 +67,7 @@ const Login = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
-                    <img alt="" src={Email} className='absolute left-2 top-2 h-4 w-4' alt="Email icon"/>
+                    <img src={Email} className='absolute left-2 top-2 h-4 w-4' alt="Email icon"/>
                   </div>
                   <div className='relative'>
                     <input 
@@ -84,7 +85,7 @@ const Login = () => {
                       className='absolute right-2 top-2 h-4 w-4 cursor-pointer'
                       onClick={togglePasswordVisibility}
                     />
-                    <img alt="" src={Lock} className='absolute left-2 top-2 h-4 w-4' alt="Lock icon"/>
+                    <img src={Lock} className='absolute left-2 top-2 h-4 w-4' alt="Lock icon"/>
                   </div>
                   <div className='text-base text-gray-800 mb-2 text-left'>
                     <Link to='/password-reset-request' className='text-orange-300'>Forgot Password?</Link>

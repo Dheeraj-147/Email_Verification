@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';  // Make sure axios is installed
 import messageReadGif from './img/Icons/message-read.gif';
 import paperPlaneGif from './img/Icons/paper-plane-unscreen.gif';
+import API_URL from '../config';
 
 const PasswordResetRequestPage = () => {
   const [email, setEmail] = useState('');
@@ -12,7 +13,7 @@ const PasswordResetRequestPage = () => {
     setIsSending(true);
     setMessage('');
     try {
-      const response = await axios.post('http://localhost:8000/registration/send-reset-password/', { email: email },
+      const response = await axios.post(`${API_URL}/registration/send-reset-password/`, { email: email },
         { headers: { 'Content-Type': 'application/json' } }
       );
       if (response.data.success) {
@@ -35,7 +36,7 @@ const PasswordResetRequestPage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-md w-96">
         <div className="flex flex-col items-center">
-          <img alt="" 
+          <img
             src={messageReadGif} 
             alt="Mail" 
             className="w-12 h-12 mb-4" 
@@ -57,7 +58,7 @@ const PasswordResetRequestPage = () => {
             disabled={isSending}
             className={`flex items-center ${isSending ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white px-4 py-2 rounded-md transition duration-200`}
           >
-            <img alt="" 
+            <img 
               src={paperPlaneGif} 
               alt="Send" 
               className="w-8 h-8 mr-2" 

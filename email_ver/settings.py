@@ -102,7 +102,8 @@ CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = "email_ver.urls"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:2374",  # React frontend port
+    "http://localhost:2374",
+    "https://quantum-death.onrender.com",  # React frontend port
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_HEADERS = [
