@@ -35,7 +35,7 @@ const PasswordResetRequestPage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-md w-96">
         <div className="flex flex-col items-center">
-          <img 
+          <img alt="" 
             src={messageReadGif} 
             alt="Mail" 
             className="w-12 h-12 mb-4" 
@@ -57,7 +57,7 @@ const PasswordResetRequestPage = () => {
             disabled={isSending}
             className={`flex items-center ${isSending ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white px-4 py-2 rounded-md transition duration-200`}
           >
-            <img 
+            <img alt="" 
               src={paperPlaneGif} 
               alt="Send" 
               className="w-8 h-8 mr-2" 

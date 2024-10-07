@@ -109,7 +109,7 @@ const HomePage = () => {
             <div className="flex space-x-7">
               <div>
                 <a href="#" className="flex items-center">
-                  <img src={logo} alt="Logo" className="h-8 w-8 mr-2 rounded-full" />
+                  <img alt="" src={logo} alt="Logo" className="h-8 w-8 mr-2 rounded-full" />
                   <span className="text-white text-lg font-bold">Quantum Auth</span>
                 </a>
               </div>
@@ -145,7 +145,7 @@ const HomePage = () => {
               {user && (
                 <div className="flex items-center mb-6">
                   {user.profile_picture ? (
-                    <img 
+                    <img alt="" 
                       src={`http://localhost:8000${user.profile_picture}`} 
                       alt="Profile" 
                       className="w-16 h-16 object-cover rounded-full mr-4"

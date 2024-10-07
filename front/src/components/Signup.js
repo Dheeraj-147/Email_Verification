@@ -121,12 +121,12 @@ const Signup = () => {
               <div className='flex flex-col justify-center items-center mt-6'>
                 <div className='relative'>
                   <input className='w-60 h-8 rounded-lg mb-4 pl-8' placeholder='Username'></input>
-                  <img src={User} className='absolute left-2 top-2 h-4 w-4'/>
+                  <img alt="" src={User} className='absolute left-2 top-2 h-4 w-4'/>
                 </div>
                 
                 <div className='relative'>
                   <input className='w-60 h-8 rounded-lg mb-4 pl-8' placeholder='Email'></input>
-                  <img src={Email} className='absolute left-2 top-2 h-4 w-4'/>
+                  <img alt="" src={Email} className='absolute left-2 top-2 h-4 w-4'/>
                 </div>
                 
                 <div className='relative'>
@@ -137,7 +137,7 @@ const Signup = () => {
                     className='absolute right-2 top-2 h-4 w-4 cursor-pointer'
                     onClick={togglePasswordVisibility1}
                   />
-                  <img src={Lock} className='absolute left-2 top-2 h-4 w-4'/>
+                  <img alt="" src={Lock} className='absolute left-2 top-2 h-4 w-4'/>
                 </div>
                 <div className='relative'>
                   <input className='w-60 h-8 rounded-lg mb-4 pl-8' placeholder='Confirm Password' type={showPassword2 ? 'text' : 'password'}></input>
@@ -147,7 +147,7 @@ const Signup = () => {
                     className='absolute right-2 top-2 h-4 w-4 cursor-pointer'
                     onClick={togglePasswordVisibility2}
                   />
-                  <img src={Lock} className='absolute left-2 top-2 h-4 w-4'/>
+                  <img alt="" src={Lock} className='absolute left-2 top-2 h-4 w-4'/>
                 </div>
                 <div className='mb-4'>
                   <label htmlFor='fileUpload' className='cursor-pointer'>

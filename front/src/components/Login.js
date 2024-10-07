@@ -66,7 +66,7 @@ const Login = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
-                    <img src={Email} className='absolute left-2 top-2 h-4 w-4' alt="Email icon"/>
+                    <img alt="" src={Email} className='absolute left-2 top-2 h-4 w-4' alt="Email icon"/>
                   </div>
                   <div className='relative'>
                     <input 
@@ -84,7 +84,7 @@ const Login = () => {
                       className='absolute right-2 top-2 h-4 w-4 cursor-pointer'
                       onClick={togglePasswordVisibility}
                     />
-                    <img src={Lock} className='absolute left-2 top-2 h-4 w-4' alt="Lock icon"/>
+                    <img alt="" src={Lock} className='absolute left-2 top-2 h-4 w-4' alt="Lock icon"/>
                   </div>
                   <div className='text-base text-gray-800 mb-2 text-left'>
                     <Link to='/password-reset-request' className='text-orange-300'>Forgot Password?</Link>
