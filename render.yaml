@@ -23,8 +23,6 @@ services:
     env: python
     buildCommand: |
       pip install -r requirements.txt
-      mkdir -p staticfiles/media
-      cp -r build/static/media/* staticfiles/media/
       python manage.py collectstatic --noinput
     startCommand: gunicorn email_ver.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
