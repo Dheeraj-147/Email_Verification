@@ -32,7 +32,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','quantum-auth.onrender.com', '.onrender.com']
 
-FRONTEND_URL = ['http://localhost:3000',"https://quantum-death.onrender.com"]  # Adjust this to match your frontend URL
+FRONTEND_URL = "https://quantum-death.onrender.com" # Adjust this to match your frontend URL
 
 
 AUTHENTICATION_BACKENDS = [
