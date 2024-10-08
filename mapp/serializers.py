@@ -3,7 +3,7 @@ from .models import User
 
 class RegistrationSerializer(serializers.ModelSerializer):
     cpassword = serializers.CharField(write_only=True)
-    profile_picture = serializers.ImageField(required=False)
+    img = serializers.ImageField(required=False)
 
     class Meta:
         model = User
