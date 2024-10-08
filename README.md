@@ -1,6 +1,8 @@
 
 # Email Verification Project
 
+[Live Application: https://quantum-death.onrender.com](https://quantum-death.onrender.com)
+
 This project implements an email verification system using a Django backend and a React frontend.
 
 ## Installation
