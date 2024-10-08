@@ -32,7 +32,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1','quantum-auth.onrender.com', '.onrender.com']
 
-FRONTEND_URL = 'http://localhost:2374'  # Adjust this to match your frontend URL
+FRONTEND_URL = ['http://localhost:3000',"https://quantum-death.onrender.com"]  # Adjust this to match your frontend URL
 
 
 AUTHENTICATION_BACKENDS = [
@@ -50,7 +50,7 @@ STATICFILES_DIRS = [
 ]
 
 # Application definition
-PORT = int(os.environ.get('PORT', 2374))
+PORT = int(os.environ.get('PORT', 8000))
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -104,7 +104,7 @@ CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = "email_ver.urls"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:2374",
+    "http://localhost:3000",
     "https://quantum-death.onrender.com",  # React frontend port
 ]
 CORS_ALLOW_ALL_ORIGINS = True
