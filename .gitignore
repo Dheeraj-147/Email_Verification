@@ -105,7 +105,6 @@ GitHub.sublime-settings
 /front/.pnp
 /front/.pnp.js
 /front/coverage
-/front/build
 
 # misc
 .DS_Store
